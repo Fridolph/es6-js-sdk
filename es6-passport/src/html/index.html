@@ -13,8 +13,14 @@
 <body>
     @@include('./templates/header.html', {})
     <h1>Hello World!</h1>
+    <div id="container"></div>
     @@include('./templates/footer.html', {})
     <script type="text/javascript" src="../lib/vendors.js"></script>
-    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/login/init.js"></script>
+    <script>
+        login({
+            container: document.querySelector('#container')
+        })
+    </script>
 </body>
 </html>
