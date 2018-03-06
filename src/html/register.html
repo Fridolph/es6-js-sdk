@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>注册页</title>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="../css/index.css" />
+</head>
+
+<body>
+  @@include('./templates/header.html', {})  
+  <div class="back">
+    <div id="register-area">
+      <h1>注册页</h1>
+      <div id="register-container"></div>
+    </div>
+  </div>
+  @@include('./templates/footer.html', {})
+  <script type="text/javascript" src="../lib/vendors.js"></script>
+  <script type="text/javascript" src="../js/register/mobile/init.js"></script>
+  <script>
+    var register = pass.register({
+      container: document.getElementById('register-container'),
+      autocomplete: false,
+      showRemember: true,
+      success: function() {
+        location.replace('profile.html')
+      }
+    })
+  </script>
+</body>
+
+</html>

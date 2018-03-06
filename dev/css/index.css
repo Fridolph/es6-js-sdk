@@ -1,0 +1,10 @@
+.login-account-wrapper {
+  position: relative;
+}
+.login-account-wrapper .del {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1CQUFBO0NBQ0Q7QUFFRDtFQUNFLG1CQUFBO0VBQ0EsWUFBQTtFQUNBLE9BQUE7Q0FBRCIsImZpbGUiOiJpbmRleC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9naW4tYWNjb3VudC13cmFwcGVyIHtcbiAgcG9zaXRpb246cmVsYXRpdmU7XG59XG5cbi5sb2dpbi1hY2NvdW50LXdyYXBwZXIgLmRlbCB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgcmlnaHQ6IDEwcHg7XG4gIHRvcDogMDtcbn0iXX0= */

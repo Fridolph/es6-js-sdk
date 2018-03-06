@@ -1,0 +1,9 @@
+.login-account-wrapper {
+  position:relative;
+}
+
+.login-account-wrapper .del {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
