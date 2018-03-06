@@ -3,6 +3,9 @@ const path = require('path');
 
 const vendors = [
   'es5-shim',
+  'fetch-detector',
+  'fetch-ie8',
+  'es6-promise/auto',
   'babel-polyfill'
 ];
 
