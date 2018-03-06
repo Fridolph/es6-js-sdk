@@ -3,14 +3,14 @@ import { fetchPost } from '../common/fetch'
 import { check } from '../common/form-check'
 
 export const bindEvent = (opts = {}) => {
-  const $loginForm = getId('#login-form')
-  const $loginBtn = getId('#login-btn')
-  const $remember = getId('#login-remember')
-  const $clearAccount = getId('#clear-account')
-  // const clearPassword = getId('#clear-password')
-  const $account = getId('#login-account')
-  const $password = getId('#login-password')
-  const $error = getId('#login-error')
+  const $loginForm = getId('login-form')
+  const $loginBtn = getId('login-btn')
+  const $remember = getId('login-remember')
+  const $clearAccount = getId('clear-account')
+  // const clearPassword = getId('clear-password')
+  const $account = getId('login-account')
+  const $password = getId('login-password')
+  const $error = getId('login-error')
 
   // 需要表单验证
   $loginForm.onsubmit = async e => {

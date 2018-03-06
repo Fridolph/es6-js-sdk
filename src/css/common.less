@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+}
+
+.header {
+    height: 72px;
+    border-bottom: 1px solid #e7e7e7;
+
+    .brand {
+        height: 100%;
+        margin-left: 60px;
+
+        img {
+            height: 100%;
+        }
+    }
+}
+
+.footer {
+    height: 72px;
+    line-height: 72px;
+    font-size: 14px;
+    text-align: center;
+    color: #99a1a6;
+    background: #F8FAFC;
+}
+
+.clearfix {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    color: #1379de;
+}
+
+a:hover {
+    color: #be831b;
+    text-decoration: underline;
+}
+
+/*
+ * 注册分步样式
+ */
+.register-steps {
+    display: block;
+    width: 720px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.register-steps li {
+    display: block;
+    float: left;
+    width: 150px;
+    padding-left: 30px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #999;
+    // box-sizing: border-box;
+}
+
+.register-steps li.active {
+    color: #3e3e3e;
+    border-bottom: 2px solid #ff4700;
+}
+
+.register-steps li i {
+    display: inline-block;
+    zoom: 1;
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    font-style: normal;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 9999px;
+    background: #999999;
+}
+
+.register-steps li.active i {
+    background: red;
+}
+
+.register-steps:after {
+    content: "\0020";
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    clear: both;
+}
+
+.profile-container {
+    width: 990px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.profile-sidebar {
+    float: left;
+    width: 140px;
+    box-sizing: border-box;
+    text-align: center;
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+            font-size: 14px;
+            padding: 5px;
+
+            a {
+                text-decoration: none;
+                color: #333333;
+            }
+        }
+
+        li.active a {
+            color: #ff4700;
+        }
+    }
+}
+
+.profile-content {
+    float: left;
+    width: 850px;
+    box-sizing: border-box;
+
+    h3 {
+        margin-left: 30px;
+    }
+}
+
+

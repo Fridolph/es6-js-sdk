@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>注册-手机验证</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="apple-mobile-web-app-capable" content="no" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/register.less" />
+</head>
+<body id="login">
+    @@include('./templates/header.html', {})
+    @@include('./templates/step.html', {"step": "1"})
+    <div id="container"></div>
+    @@include('./templates/footer.html', {})
+    <script type="text/javascript" src="../lib/vendors.js"></script>
+    <script type="text/javascript" src="../js/register/mobile/init.js"></script>
+    <script type="text/javascript">
+        var getUrlParams = function(key) {
+            const query = location.search.replace(/^\?/, '');
+            let obj = {};
+            query.split('&').map((item) => {
+                let tmp = item.split('=');
+                obj[tmp[0]] = tmp[1];
+            })
+            if (!key) {
+                return obj;
+            }
+            else {
+                return obj[key];
+            }
+        };
+        if (getUrlParams('bind') || getUrlParams('forget')) {
+            document.querySelector('.register-steps').style.display = 'none';
+            document.querySelector('title').innerText = '手机验证';
+        }
+        var registerMobile = pass.regMobile({
+            container: document.getElementById('container'),
+            success: function() {
+                if (getUrlParams('bind')) {
+                    location.replace('common-success.html?text=手机号绑定成功');
+                }
+                else if (getUrlParams('forget')){
+                    location.replace('common-success.html?text=手机号验证成功，已将重置链接通过短信发送到您的手机');
+                }
+                else {
+                    location.replace('register-info.html');
+                }
+
+            }
+        });
+    </script>
+</body>
+</html>
+

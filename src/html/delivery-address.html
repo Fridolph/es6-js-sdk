@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>收货地址</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="apple-mobile-web-app-capable" content="no" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/delivery.less" />
+</head>
+<body id="login">
+    @@include('./templates/header.html', {})
+    <div class="profile-container">
+        @@include('./templates/sidebar.html', {"index": "2"})
+        <div class="profile-content" id="profile-content">
+            <h3>收货地址管理</h3>
+            <div id="profile-wrap"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    @@include('./templates/footer.html', {})
+
+    <script type="text/javascript" src="../lib/vendors.js"></script>
+    <script type="text/javascript" src="../js/delivery-address/init.js"></script>
+    <script type="text/javascript">
+        var delivery = pass.delivery({
+            container: document.getElementById('profile-wrap'),
+            success: function () {
+                location.reload();
+            }
+        })
+    </script>
+</body>
+</html>

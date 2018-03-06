@@ -2,13 +2,13 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>登录</title>
+    <title>注册-手机验证</title>
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="apple-mobile-web-app-capable" content="no">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" type="text/css" href="../css/login.css?v=1520332681817">
+    <link rel="stylesheet" type="text/css" href="../css/register.css?v=1520333044149">
 </head>
 <body id="login">
     <div class="header">
@@ -16,13 +16,26 @@
         <img src="../images/logo.png">
     </div>
 </div>
-    <div class="back">
-        <div id="login-area">
-            <h1>密码登录</h1>
-            <div id="login-container"></div>
-        </div>
-    </div>
-
+    <ul class="register-steps">
+    <li class="">
+        <i>1</i>
+        设置用户名
+    </li>
+    <li class="active">
+        <i>2</i>
+        填写账号信息
+    </li>
+    <li class="">
+        <i>3</i>
+        设置支付方式
+    </li>
+    <li class="">
+        <i>4</i>
+        注册成功
+    </li>
+    <div class="clearfix"></div>
+</ul>
+    <div id="container"></div>
     <div class="footer">
     © 2017 imooc.com  京ICP备 13046642号-2
 </div>
@@ -44,13 +57,13 @@
     
     
     
-<script type="text/javascript" src="../lib/vendors.js"></script><script type="text/javascript" src="..\js\index.js?v=1520332681816"></script><script type="text/javascript">
-        var login = pass.login({
-            container: document.getElementById('login-container'),
-            autocomplete: false,
+<script type="text/javascript" src="../lib/vendors.js"></script><script type="text/javascript" src="..\js\register-info.js?v=1520333044148"></script><script type="text/javascript">
+        var registerMobile = pass.regInfo({
+            container: document.getElementById('container'),
             success: function() {
-                location.replace('profile.html');
+                location.replace('register-payment.html');
             }
-        })
+        });
     </script></body>
 </html>
+

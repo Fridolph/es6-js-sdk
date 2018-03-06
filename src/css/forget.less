@@ -1,0 +1,146 @@
+@import './common.less';
+
+
+.choose-find-mod {
+    overflow: hidden;
+    margin-top: 100px;
+
+    .find-mod {
+        width: 250px;
+        padding:  10px 0;
+        margin: 50px 75px;
+        background: #ff4401;
+        color: #ffffff;
+        font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+        float: left;
+    }
+}
+
+.forget-tip {
+    font-size: 12px;
+    img {
+        height: 18px;
+        width: 18px;
+        position: relative;
+        top: 4px;
+        margin-right: 3px;
+    }
+}
+
+p.forget-tip {
+    margin-left: 16px;
+}
+
+
+.forget-dialog {
+    position: fixed;
+    z-index: 1000000;
+    margin: auto;
+    height: 300px;
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 800px;
+    box-sizing: border-box;
+    padding: 0 100px;
+    border: 2px solid #dedede;
+    border-top: 2px solid #ff4a00;
+    display: none;
+
+    .forget-verify-dialog-header {
+        height: 20px;
+        .forget-dialog-close {
+            float: right;
+            background: url('../images/delete.png') no-repeat center;
+            background-size: 60%;
+            height: 24px;
+            width: 24px;
+            position: absolute;
+            right: 6px;
+            top: 8px;
+            cursor: pointer;
+        }
+    }
+
+    label {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        line-height: 36px;
+        zoom: 1;
+
+        > span {
+            display: block;
+            float: left;
+            width: 22%;
+            text-align: right;
+        }
+
+        > input, > div {
+            // display: block;
+            float: left;
+            width: 78%;
+            box-sizing: border-box;
+        }
+
+        > input {
+            border: 1px solid #dedede;
+            height: 35px;
+            line-height: 17px;
+            padding: 9px;
+            font-size: 14px;
+            outline: none;
+        }
+    }
+
+    input[type="submit"] {
+        display: block;
+        width: 180px;
+        zoom: 1;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 20px;
+        color: #FFF;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        background: #ff4001;
+        border: 0;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    label:after {
+        content: "\0020";
+        display: block;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 0;
+        width: 0;
+        clear: both;
+    }
+
+    input[type="submit"]:hover {
+        color: #FFF;
+        text-decoration: none;
+        background-color: #f73500;
+    }
+
+    input[type="submit"].disabled {
+        background-color: #ededed;
+        border-color: #ededed;
+        color: #999;
+        cursor: default;
+    }
+
+    input[type="submit"].disabled:hover {
+        background-color: #ededed;
+    }
+
+}

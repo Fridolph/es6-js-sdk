@@ -9,29 +9,45 @@
   <meta name="description" content="">
   <meta name="apple-mobile-web-app-capable" content="no">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" type="text/css" href="../css/index.css?v=1520324655238">
+  <link rel="stylesheet" type="text/css" href="../css/index.css?v=1520333044233">
 </head>
 
 <body>
-  <div class="footer">footer</div>  
+  <div class="header">
+    <div class="brand">
+        <img src="../images/logo.png">
+    </div>
+</div>  
   <div class="back">
     <div id="register-area">
       <h1>注册页</h1>
       <div id="register-container"></div>
     </div>
   </div>
-  <div class="footer">footer</div>
+  <div class="footer">
+    © 2017 imooc.com  京ICP备 13046642号-2
+</div>
+<script type="text/javascript">
+    window.onload = function() {
+        var setfooterHeight = function() {
+            document.querySelector('.footer').style.marginTop = '0px';
+            if (window.innerHeight > document.body.offsetHeight) {
+                document.querySelector('.footer').style.marginTop = (window.innerHeight - document.body.offsetHeight) + 'px';
+            }
+        }
+
+        setfooterHeight();
+        window.addEventListener('resize', function(e) {
+            setfooterHeight();
+        })
+    }
+</script>
   
   
   
-<script type="text/javascript" src="../lib/vendors.js"></script><script type="text/javascript" src="..\js\register.js?v=1520324655237"></script><script>
-    var register = pass.register({
-      container: document.getElementById('register-container'),
-      autocomplete: false,
-      showRemember: true,
-      success: function() {
-        location.replace('profile.html')
-      }
+<script type="text/javascript" src="../lib/vendors.js"></script><script type="text/javascript" src="..\js\register.js?v=1520333044233"></script><script>
+    var register = pass.regMobile({
+      container: document.getElementById('register-container')      
     })
   </script></body>
 

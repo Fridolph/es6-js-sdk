@@ -1,0 +1,122 @@
+@import './common.less';
+
+.delivery-address-wrapper {
+    max-width: 600px;
+    font-size: 14px;
+
+    label {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        padding-right: 100px;
+        box-sizing: border-box;
+        line-height: 36px;
+        zoom: 1;
+
+        > span {
+            display: block;
+            float: left;
+            width: 22%;
+            text-align: right;
+        }
+
+        > input, > div , > textarea{
+            // display: block;
+            float: left;
+            width: 78%;
+            box-sizing: border-box;
+        }
+
+        > input, > textarea {
+            border: 1px solid #dedede;
+            height: 35px;
+            line-height: 17px;
+            padding: 9px;
+            font-size: 14px;
+            outline: none;
+            resize: none;
+        }
+
+        > textarea {
+            height: auto;
+        }
+    }
+
+    input[type="submit"] {
+        display: block;
+        width: 180px;
+        zoom: 1;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 20px;
+        color: #FFF;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        background: #ff4001;
+        border: 0;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    label:after {
+        content: "\0020";
+        display: block;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 0;
+        width: 0;
+        clear: both;
+    }
+
+    input[type="submit"]:hover {
+        color: #FFF;
+        text-decoration: none;
+        background-color: #f73500;
+    }
+
+    input[type="submit"].disabled {
+        background-color: #ededed;
+        border-color: #ededed;
+        color: #999;
+        cursor: default;
+    }
+
+    input[type="submit"].disabled:hover {
+        background-color: #ededed;
+    }
+
+    .delivery-address-list {
+        table {
+            width: 100%;
+            margin: 20px 0 20px 30px;
+            font-size: 13px;
+            text-align: center;
+            table-layout:fixed;
+            border-left: 1px solid #e7e7e7;
+            border-right: 1px solid #e7e7e7;
+            border-collapse: collapse;
+            padding: 0;
+
+            tr {
+                border-bottom: 1px solid #e7e7e7;
+            }
+            th {
+                background: #f2f2f2;
+            }
+
+            th, td {
+                padding: 5px;
+                border-top: 1px solid #e7e7e7;
+                height: 40px;
+                box-sizing: border-box;
+            }
+
+            td {
+                word-wrap:break-word;
+            }
+        }
+    }
+}

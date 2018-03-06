@@ -4,9 +4,9 @@ const tpl = (opts = {}) => {
       <form id="register-mobile-form">
         <label>
           <span>手机号</span>
-          <input type="text" placeholder="${opts.mobilePlaceholder}" valid="present, mobile" />
+          <input type="text" placeholder="${opts.mobilePlaceholder || ''}" valid="present, mobile" />
         </label>
-
+        <br>
         <label>
           <span>验证</span>
           <div id="register-verify-wrapper"></div>

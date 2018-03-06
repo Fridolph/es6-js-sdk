@@ -1,0 +1,233 @@
+@import './common.less';
+.register-tip {
+    font-size: 12px;
+    img {
+        height: 18px;
+        width: 18px;
+        position: relative;
+        top: 4px;
+        margin-right: 3px;
+    }
+}
+
+p.register-tip {
+    margin-left: 16px;
+}
+
+.register-success,
+.register-payment-wrapper,
+.register-verify-form,
+.register-info-wrapper,
+.register-mobile-wrapper {
+    width: 600px;
+    padding: 0 100px;
+    margin: 60px auto 0 auto;
+    min-height: 350px;
+    position: relative;
+    box-sizing: border-box;
+
+    label {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        line-height: 36px;
+        zoom: 1;
+
+        > span {
+            display: block;
+            float: left;
+            width: 22%;
+            text-align: right;
+        }
+
+        > input, > div {
+            // display: block;
+            float: left;
+            width: 78%;
+            box-sizing: border-box;
+        }
+
+        > input {
+            border: 1px solid #dedede;
+            height: 35px;
+            line-height: 17px;
+            padding: 9px;
+            font-size: 14px;
+            outline: none;
+        }
+    }
+
+    input[type="submit"] {
+        display: block;
+        width: 180px;
+        zoom: 1;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 20px;
+        color: #FFF;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        background: #ff4001;
+        border: 0;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    label:after {
+        content: "\0020";
+        display: block;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 0;
+        width: 0;
+        clear: both;
+    }
+
+    input[type="submit"]:hover {
+        color: #FFF;
+        text-decoration: none;
+        background-color: #f73500;
+    }
+
+    input[type="submit"].disabled {
+        background-color: #ededed;
+        border-color: #ededed;
+        color: #999;
+        cursor: default;
+    }
+
+    input[type="submit"].disabled:hover {
+        background-color: #ededed;
+    }
+
+    .register-verify-wrapper {
+        height: 36px;
+        font-size: 14px;
+        line-height: 36px;
+        // float: left;
+        /*
+         * 滑屏组件样式覆盖
+         */
+        .vs-moved-bg {
+            background: #7ac23c;
+        }
+
+        .vs-unmoved-bg {
+            background: #e8e8e8;
+        }
+
+        @-webkit-keyframes slidetounlock {
+            0% {background-position:-200px 0}
+            100% {background-position:200px 0}
+        }
+
+        @keyframes slidetounlock {
+            0% {background-position:-200px 0}
+            100% {background-position:200px 0}
+        }
+
+        .vs-text {
+            text-align: center;
+            color: #9c9c9c;
+            font-size: 12px;
+            background: -webkit-gradient(linear,left top,right top,color-stop(0,#4d4d4d),color-stop(.4,#4d4d4d),color-stop(.5,#fff),color-stop(.6,#4d4d4d),color-stop(1,#4d4d4d));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-animation: slidetounlock 3s infinite;
+            -webkit-text-size-adjust: none;
+        }
+
+        @-webkit-keyframes slidetounlock {
+            0% {background-position:-100px 0}
+            100% {background-position:100px 0}
+        }
+
+        .vs-move-btn {
+            width: 40px;
+            border: 1px solid #737383;
+            background: url(../images/slide-block.png) center;
+            background-color: #ffffff;
+            background-repeat: no-repeat;
+            background-size: 50%;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .vs-wrapper.success {
+            .vs-text {
+                // color: #ffffff;
+                -webkit-animation: none;
+                background: #7ac23c;
+                -webkit-text-fill-color: #ffffff;
+            }
+
+            .vs-move-btn {
+                width: 40px;
+                border: 1px solid #737383;
+                background: url(../images/ok-fill.png) center;
+                background-color: #ffffff;
+                background-repeat: no-repeat;
+                background-size: 50%;
+                cursor: pointer;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+.register-verify-dialog {
+    position: absolute;
+    z-index: 1000000;
+    margin: auto;
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    width: 600px;
+    box-sizing: border-box;
+    padding: 0 100px;
+    border: 2px solid #dedede;
+    border-top: 2px solid #ff4a00;
+    display: none;
+
+    .register-verify-dialog-header {
+        height: 20px;
+        .register-verify-dialog-close {
+            float: right;
+            background: url('../images/delete.png') no-repeat center;
+            background-size: 60%;
+            height: 24px;
+            width: 24px;
+            position: absolute;
+            right: 6px;
+            top: 8px;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.profile-content {
+    .register-info-wrapper{
+        width: 600px;
+        margin: 0;
+        min-height: 350px;
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 0;
+    }
+}
+
+.register-success {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 20px;
+    word-break: break-word;
+    img {
+        display: block;
+        height: 100px;
+        margin: 30px auto;
+    }
+}

@@ -24,13 +24,8 @@
   <script type="text/javascript" src="../lib/vendors.js"></script>
   <script type="text/javascript" src="../js/register/mobile/init.js"></script>
   <script>
-    var register = pass.register({
-      container: document.getElementById('register-container'),
-      autocomplete: false,
-      showRemember: true,
-      success: function() {
-        location.replace('profile.html')
-      }
+    var register = pass.regMobile({
+      container: document.getElementById('register-container')      
     })
   </script>
 </body>
