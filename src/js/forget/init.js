@@ -1,10 +1,12 @@
-import '../../common/polyfill';
+import '../common/polyfill';
 import render from './render';
 import bindEvent from './event';
-// import FormCheck from '../common/formCheck';
-const regMobile = (opts = {}) => {
+
+
+
+const forget = (opts = {}) => {
     var defaultOpts = {
-        mobilePlaceHolder: '请输入您的手机号',
+
     };
 
     var options = Object.assign(defaultOpts, opts)
@@ -13,4 +15,6 @@ const regMobile = (opts = {}) => {
     bindEvent(options);
 }
 
-export { regMobile }
+export { forget }
+
+// new FormCheck({});

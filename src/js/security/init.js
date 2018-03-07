@@ -1,10 +1,10 @@
-import '../../common/polyfill';
+import '../common/polyfill';
 import render from './render';
 // import bindEvent from './event';
 // import FormCheck from '../common/formCheck';
-const regInfo = (opts) => {
+const security = (opts) => {
     render(opts);
     // bindEvent(opts);
 }
 
-export { regInfo }
+export { security }

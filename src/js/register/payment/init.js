@@ -2,9 +2,10 @@ import '../../common/polyfill';
 import render from './render';
 import bindEvent from './event';
 // import FormCheck from '../common/formCheck';
-const regMobile = (opts = {}) => {
+const regPayment = (opts = {}) => {
     var defaultOpts = {
-        mobilePlaceHolder: '请输入您的手机号',
+        paymentPlaceHolder: '请输入您的XX宝账号',
+        paymentPasswordPlaceHolder: '请输入您的XX宝密码'
     };
 
     var options = Object.assign(defaultOpts, opts)
@@ -13,4 +14,4 @@ const regMobile = (opts = {}) => {
     bindEvent(options);
 }
 
-export { regMobile }
+export { regPayment }
